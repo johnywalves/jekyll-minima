@@ -43,3 +43,6 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Visualizar alterações
+# bundle exec jekyll serve
