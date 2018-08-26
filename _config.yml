@@ -16,13 +16,16 @@
 title: Johny W. Alves
 email: contato@johnywalves.com.br
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Meu nome é Johny William de Oliveira Alves amo aprender, criei esse espaço para organizar meus estudos, compartilhar e receber feedback.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lab.johnywalves.com.br" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: johnywalves
+linkedin_username: johnywalves
 github_username:  johnywalves
+twitter_username: johnywalves
+facebook_username: johnywalves
+instagram_username: johnywalves
+youtube_username: johnywalves
+googleplus_username: +johnywalves
 
 permalink: /:title
 
@@ -31,6 +34,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from  
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -43,6 +47,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-# Visualizar alterações
-# bundle exec jekyll serve
