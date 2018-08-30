@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PipEnv e Virtual Enviroment"
-date: "2018-08-26 11:50:38"
+date: 2018-08-25 15:00:00 -0300
 categories: Ambiente Python
 output: html_document      
 ---
@@ -12,26 +12,30 @@ Com um [Ambiente Python](../Ambiente_Python) preparado
 
 ## Gerenciando dependências
 
-Um aplicativo usa sua própria coleção de bibliotecas, programadores tem o hábito de colecionar pacotes e usar somente alguns.
+Programadores tem o hábito de colecionar pacotes, mas projetos usam suas próprias bibliotecas, para facilitar a
 
 
 {% highlight bash %}
 pip install pipenv
 {% endhighlight %}
 
-No exemplo a seguir vamos usar o pacote flask, que mesmo instalado no ambiente da máquina, precisa estar no *Virtual*, ou somente no virtual 
+## Gerenciar ambiente virtual
+
+Para criar um ambiente virtual navegue para a pasta de trabalho e execute o comando 'pipenv install' ou 'pipenv shell' usando a versão instalada e configurada como padrão do Python<br>
+
+
+{% highlight bash %}
+pipenv install 
+{% endhighlight %}
+
+Com o comando anterior o sistema cria no arquvio **Pipfile** na pasta atual, o arquivo contém todas as configurações do ambiente como versão do Pyhton e pacotes instalados nele e o **Pipfile.lock** com as versões dos pacotes<br><br>
+Para instalar um ambiente apartir de um já configurado basta executar novamente o comando em uma pasta com os **Pipfile** e o **Pipfile.lock**
+
+No exemplo a seguir vamos usar o pacote flask, que mesmo instalado no ambiente da máquina, precisa estar no *Virtual*, ou somente no virtual
 
 
 {% highlight bash %}
 pipenv install flask
-{% endhighlight %}
-
-Com o comando anterior o sistema cria no arquvio **Pipfile** na pasta atual, o arquivo contém todas as configurações do ambiente como versão do Pyhton e pacotes instalados nele e o **Pipfile.lock** com as versões dos pacotes<br><br>
-Para instalar um ambiente apartir de um já configurado basta executar o comando a seguir em uma pasta com os **Pipfile** e o **Pipfile.lock**
-
-
-{% highlight bash %}
-pipenv install
 {% endhighlight %}
 
 ## Programa
@@ -55,21 +59,21 @@ if __name__ == '__main__':
 
 ## Execução
 
-Para executar a aplicação em ambiente virtual, podemos executar sua chamada pelo shell 
+Para executar a aplicação em ambiente virtual, podemos executar a chamada 'python web.py' pelo shell 
 
 
 {% highlight bash %}
 pipenv shell
-{% endhighlight %}
+``
 
 Ou executar direto para execução da aplicação 
 
+{% endhighlight %}
 
 {% highlight bash %}
 pipenv run python web.py
 {% endhighlight %}
-
 ## Referências
-<http://flask.pocoo.org/docs/1.0/quickstart/>
+<http://flask.pocoo.org/docs/1.0/quickstart/><br>
 <https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv>
 

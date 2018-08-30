@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Instalação do Python e Pacotes"
-date: "2018-08-26 12:16:50"
+date: 2018-08-25 15:00:00 -0300
 categories: Ambiente Python
 output: html_document
 ---
@@ -37,6 +37,12 @@ Ou desinstalar
 
 {% highlight bash %}
 pip uninstall <nome_do_pacote>
+{% endhighlight %}
+Para atualizar um pacote atualizado no ambiente do Python, no instalar deve ser usado a diretiva --update, objetos como **pip** e o **setuptools**
+
+
+{% highlight bash %}
+pip install --upgrade setuptools pip
 {% endhighlight %}
 
 Para facilitar a portalidade e replicação de ambientes podemos exportar as listas de todos os pacotes instalados e suas respectivas versões
