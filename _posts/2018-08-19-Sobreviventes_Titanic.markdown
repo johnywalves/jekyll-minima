@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Previsão de Sobreviventes do Titanic"
-date: "2018-08-26 11:52:17"
-categories: MachineLearning R
+title: "Previsão de Sobreviventes do Titanic (Linguagem R)"
+date: 2018-08-19 15:00:00 -0300
+categories: ["Machine Learning", R]
 output: html_document    
 ---
+
 Kaggle, um organizador de competições para cientistas de dados, o desafio inicial dele é a previsão dos sobreviventes da viagem inaugural do RMS TItanic. [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) 
 
 
@@ -211,3 +212,15 @@ ggplot(rankImportance, aes(x = reorder(Variables, Importance),
 {% endhighlight %}
 
 ![plot of chunk importance](/./assets/Rfig/importance-1.svg)
+<div class="post-categories">
+            Categorias: 
+            {% if post %}
+            {% assign categories = post.categories %}
+            {% else %}
+            {% assign categories = page.categories %}
+            {% endif %}
+            {% for category in categories %}
+            <a href="{{site.baseurl}}/categorias/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+            </div>

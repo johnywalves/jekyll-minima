@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Classificação de Séries IMDb"
-date: "2018-08-26 11:46:01"
+title: "Classificação de Séries IMDb (Linguagem R)"
+date: 2018-08-19 15:00:00 -0300
 categories: Visualização R
 output: html_document
 ---
@@ -218,3 +218,15 @@ print(melhoresSeries)
 ## 2332879 tt2487370 Whose Line Is It Anyway?    tt2487370      9.947059
 ## 183451  tt0190196  Romper Room and Friends    tt0190196      9.900000
 {% endhighlight %}
+<div class="post-categories">
+            Categorias: 
+            {% if post %}
+            {% assign categories = post.categories %}
+            {% else %}
+            {% assign categories = page.categories %}
+            {% endif %}
+            {% for category in categories %}
+            <a href="{{site.baseurl}}/categorias/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+            </div>

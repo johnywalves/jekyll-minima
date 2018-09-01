@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Mortes em Kill Bill"
-date: "2018-08-26 11:50:30"
+title: "Mortes em Kill Bill (Linguagem R)"
+date: 2018-08-19 15:00:00 -0300
 categories: Visualização R
 output: html_document
 ---
@@ -107,3 +107,15 @@ Por final, gerei o arquivo para visualização futura e divulgação no site
 ggsave(filename = 'KillBillDeath.jpg', graph,
        width = 9.38, height = 5.47, dpi = 95, units = 'in', device = 'jpg')
 {% endhighlight %}
+<div class="post-categories">
+            Categorias: 
+            {% if post %}
+            {% assign categories = post.categories %}
+            {% else %}
+            {% assign categories = page.categories %}
+            {% endif %}
+            {% for category in categories %}
+            <a href="{{site.baseurl}}/categorias/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+            </div>

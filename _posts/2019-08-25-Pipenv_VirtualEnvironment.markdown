@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PipEnv e Virtual Enviroment"
+title: "PipEnv e Virtual Enviroment (Python)"
 date: 2018-08-25 15:00:00 -0300
 categories: Ambiente Python
 output: html_document      
@@ -77,3 +77,15 @@ pipenv run python web.py
 <http://flask.pocoo.org/docs/1.0/quickstart/><br>
 <https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv>
 
+<div class="post-categories">
+            Categorias: 
+            {% if post %}
+            {% assign categories = post.categories %}
+            {% else %}
+            {% assign categories = page.categories %}
+            {% endif %}
+            {% for category in categories %}
+            <a href="{{site.baseurl}}/categorias/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+            </div>

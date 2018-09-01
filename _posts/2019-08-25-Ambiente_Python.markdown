@@ -58,3 +58,15 @@ E posteriormente instalar a lista completa somente com um comando
 {% highlight bash %}
 pip install -r requirements.txt
 {% endhighlight %}
+<div class="post-categories">
+            Categorias: 
+            {% if post %}
+            {% assign categories = post.categories %}
+            {% else %}
+            {% assign categories = page.categories %}
+            {% endif %}
+            {% for category in categories %}
+            <a href="{{site.baseurl}}/categorias/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+            </div>
